@@ -22,34 +22,34 @@ import com.runtime.listener.Assertion;
 public class RegPageElements {
 	
 	// 立即注册按钮
-	public static final String REG_BTN = "com.allin.social:id/tv_new_register";
+	public static final String REG_BTN = "";
 	
 	// 注册用户名输入框
-	public static final String CREATE_USER = "com.allin.social:id/edt_new_login_name";
+	public static final String CREATE_USER = "";
 	
 	// 提示文字(xpath)
-	public static final String CON_TEXT = "//*[contains(@text,'输入你的用户名,创建新账户')]";
+	public static final String CON_TEXT = "";
 	
 	// 下一步按钮
-	public static final String CREATE_USER_NEXT = "com.allin.social:id/btn_createuser_next";
+	public static final String CREATE_USER_NEXT = "";
 	
 	// 注册时手机验证码
-	public static final String PHONE_CODE = "com.allin.social:id/et_input_phone_code";
+	public static final String PHONE_CODE = "";
 	
 	// 注册的密码输入框
-	public static final String CREATE_PW = "com.allin.social:id/edt_new_login_passward";
+	public static final String CREATE_PW = "";
 	
 	// 注册时手机验证码
-	public static final String EMAIL_CODE = "com.allin.social:id/rl_number";
+	public static final String EMAIL_CODE = "";
 	
 	// 创建账户按钮
-	public static final String CREATE_CONFIRM = "com.allin.social:id/btn_new_into";
+	public static final String CREATE_CONFIRM = "";
 	
 	// 医师认证标题
-	public static final String AUTH_PAGE = "com.allin.social:id/tv_auth_title";
+	public static final String AUTH_PAGE = "";
 	
 	// 错误提示
-	public static final String ERROR_MESSAGE = "com.allin.social:id/tv_error_message";
+	public static final String ERROR_MESSAGE = "";
 	
 	private static final Logger LOG = Logger.getLogger(RegPageElements.class);
 	

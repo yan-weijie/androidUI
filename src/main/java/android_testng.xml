@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="2" configfailurepolicy="skip" 
+    time-out="300000" skipfailedinvocationcounts="true" preserve-order="true" > 
+	<listeners>
+		<listener class-name="com.runtime.listener.ScreenshotListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+		<listener class-name="com.runtime.listener.RetryListener"/>
+	</listeners>
+	<test name="删除日志/截图等临时文件" enabled="true" > 
+		<classes>
+			<class name="com.allinmd.android.InitContextCase">
+			</class>
+		</classes>
+	</test>
+	<test name="安装唯医app" enabled="true" >
+		<classes>
+			<class name="com.allinmd.android.InstallAPP">
+			</class>
+		</classes>
+	</test>
+	<test name="欢迎页面" enabled="true" > 
+		<classes>
+			<class name="com.allinmd.android.WelcomePageCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case01-邮箱注册-医师认证"  enabled="true" > 
+		<classes>
+			<class name="com.allinmd.android.RegAuthEmailCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case02-手机注册-医师认证" enabled="true" > 
+		<classes>
+			<class name="com.allinmd.android.RegAuthPhoneCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case03-邮箱注册-跳过认证" enabled="true" > 
+		<classes>
+			<class name="com.allinmd.android.RegEmailCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case04-手机注册-跳过认证" enabled="true" > 
+		<classes>
+			<class name="com.allinmd.android.RegPhoneCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case05-未认证-病例终端页权限判断" enabled="true" >	
+		<classes>
+			<class name="com.allinmd.android.NotAuthCaseAccessCase">
+			</class>
+		</classes>
+	</test>		
+	<test name="case06-未认证-话题终端页权限判断" enabled="true" >	
+		<classes>
+			<class name="com.allinmd.android.NotAuthTopicAccessCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case07-未认证-文库终端页权限判断" enabled="true" >	
+		<classes>
+			<class name="com.allinmd.android.NotAuthDocAccessCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case08-未认证-视频收藏权限判断" enabled="true" >	
+		<classes>
+			<class name="com.allinmd.android.NotAuthVideoAccessCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case09-邮箱登录-退出登录" enabled="true" > 
+		<classes>
+			<class name="com.allinmd.android.LoginEmailCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case10-手机登录-退出登录" enabled="true" > 
+		<classes>
+			<class name="com.allinmd.android.LoginPhoneCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case11-未登录-病例终端页权限判断" enabled="true" >	
+		<classes>
+			<class name="com.allinmd.android.NotLoginCaseAccessCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case12-未登录-话题终端页权限判断" enabled="true" >	
+		<classes>
+			<class name="com.allinmd.android.NotLoginTopicAccessCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case13-未登录-文库终端页权限判断" enabled="true" >	
+		<classes>
+			<class name="com.allinmd.android.NotLoginDocAccessCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case14-未登录-视频收藏权限判断" enabled="true" >	
+		<classes>
+			<class name="com.allinmd.android.NotLoginVideoAccessCase">
+			</class>
+		</classes>
+	</test>		
+	<test name="case15-邮箱CAOS登录 -退出登录" enabled="true" >	
+		<classes>
+			<class name="com.allinmd.android.CAOSLoginEmailCase">
+			</class>
+		</classes>
+	</test>	
+	<test name="case16-手机CAOS登录 -退出登录" enabled="true" >	
+		<classes>
+			<class name="com.allinmd.android.CAOSLoginPhoneCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case17-病例-发布/编辑" enabled="true" >
+		<classes>
+		    <class name="com.allinmd.android.PubEditCaseCase">
+		    </class>
+		</classes>
+	</test>
+	<test name="case18-病例-草稿/发布 " enabled="true" >
+		<classes>
+		    <class name="com.allinmd.android.PubDraftOfCaseCase">
+		    </class>
+		</classes>
+	</test>
+	<!-- 依赖发布病例 -->
+	<test name="case19-评论-发布/个人中心查看发布/删除" enabled="true" >
+		<classes>
+		    <class name="com.allinmd.android.PubCheckDeleteCommentCase">
+		    </class>
+		</classes>
+	</test>
+	<test name="case20-话题-发布/个人中心查看发布" enabled="false" >
+		<classes>
+		    <class name="com.allinmd.android.PubCheckTopicCase">
+		    </class>
+		</classes>
+	</test>
+	<test name="case21-唯医登录-修改密码" enabled="true" >
+		<classes>
+			<class name="com.allinmd.android.UpdatePasswordCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case22-邮箱-忘记密码" enabled="true" >	
+		<classes>
+			<class name="com.allinmd.android.ForGetPWEmailCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case23-手机-忘记密码" enabled="true" >	
+		<classes>
+			<class name="com.allinmd.android.ForGetPWPhoneCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case24-搜索-输入医师名-结果验证" enabled="true" >
+		<classes>
+			<class name="com.allinmd.android.SearchAutherCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case25-搜索-输入医学关键词-结果验证" enabled="true" >
+		<classes>
+			<class name="com.allinmd.android.SearchKeywordCase">
+			</class>
+		</classes>
+	</test>
+	<test name="case26-病例-收藏/取消收藏/个人中心查看收藏" enabled="true" >
+		<classes>
+		    <class name="com.allinmd.android.CollectCheckCaseCase">
+		    </class>
+		</classes>
+	</test>
+	<test name="case27-文章-收藏/取消收藏/个人中心查看收藏" enabled="true" >
+		<classes>
+		    <class name="com.allinmd.android.CollectCheckDocCase">
+		    </class>
+		</classes>
+	</test>
+	<test name="case28-话题-收藏/取消收藏/个人中心查看收藏" enabled="true" >
+		<classes>
+		    <class name="com.allinmd.android.CollectCheckTopicCase">
+		    </class>
+		</classes>
+	</test>
+	<test name="case29-视频-收藏/取消收藏/个人中心查看收藏" enabled="true" >
+		<classes>
+		    <class name="com.allinmd.android.CollectCheckVideoCase">
+		    </class>
+		</classes>
+	</test>
+	<test name="case30-病例-关注/个人中心查看关注/取消关注" enabled="true" >
+		<classes>
+		    <class name="com.allinmd.android.FollowCheckCaseCase">
+		    </class>
+		</classes>
+	</test>
+	<test name="case31-按标签筛选-列表排序检查" enabled="true" >
+		<classes>
+		    <class name="com.allinmd.android.SortLableListCheckCase">
+		    </class>
+		</classes>
+	</test>
+	<test name="case32-按专业筛选-列表排序检查" enabled="true" >
+		<classes>
+		    <class name="com.allinmd.android.SortMajorCheckCase">
+		    </class>
+		</classes>
+	</test>
+</suite> 
